@@ -14,7 +14,7 @@ function [p, trialData, trialTimes] = runTrial_fun(trialInfo, p, stage)
 trialData  = table2struct(trialInfo);
 trialTimes = [];
 
-%% Define Flankers & Target stimuli
+%% Define & Target stimuli
 
 flankStim = my_coordFlip_fn(p.stim.rightFlankers, [abs(trialInfo.flankers - 2), 0], p.display.rect, 'lines');  % abs(trialInfo.target-2) because 1 means left, and 2 means right
 
